@@ -1,5 +1,5 @@
 % Intro Options
-\ProvidesClass{hawkins-resume}[2014/04/30 CV class]
+\ProvidesClass{resume}[2014/04/30 CV class]
 \NeedsTeXFormat{LaTeX2e}
 \DeclareOption{print}{\def\@cv@print{}}
 \DeclareOption*{%
@@ -14,8 +14,8 @@
 \usepackage{hyperref}
 \usepackage{titlesec}
 \usepackage[absolute]{textpos}
-\usepackage[UKenglish]{babel}
-\usepackage[UKenglish]{isodate}
+\usepackage[english]{babel}
+\usepackage[english]{isodate}
 \usepackage{fontspec,xltxtra,xunicode}
 
 % Color definitions
