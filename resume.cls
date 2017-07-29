@@ -46,7 +46,7 @@ Last Updated on
 \textblockorigin{0mm}{5mm}
 \setlength{\parindent}{0cm}
 \newcommand{\clearance}[1]{\begin{textblock}{60}(5,0)
-\fontspec[Path = fonts/lato/]{Lato-Hai}\fontsize{16pt}{16pt}\selectfont 
+\fontspec[Path = fonts/lato/]{Lato-Hai}\fontsize{12pt}{12pt}\selectfont 
 Clearance:\\
 \fontspec[Path = fonts/lato/]{Lato-Lig}\selectfont\textbf{#1}
 \end{textblock}}
