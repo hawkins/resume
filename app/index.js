@@ -37,26 +37,43 @@ const getFiles = () =>
         }
       },
       res => {
-        res.setEncoding("utf8");
         let body = "";
+        res.setEncoding("utf8");
         res.on("data", data => (body += data));
         res.on("end", () => {
           try {
             resolve(JSON.parse(body));
           } catch (e) {
-            reject(e);
+            reject("An error occurred parsing the JSON response from GitHub.");
           }
         });
       }
     );
   });
 
+// Determine latest resume version from given files
+const getResume = files => {
+  let resume = null;
+
+  files.map(f => {
+    if (f.type !== "file") return;
+    if (!f.name.endsWith(".pdf")) return;
+    if (!f.name.match(/resume/i)) return;
+
+    resume = f;
+  });
+
+  return resume;
+};
+
 // Create the server
-// TODO: Make async
 const server = http.createServer(async (req, res) => {
   const files = await getFiles();
-  files.map(f => (f.type === "file" ? console.log(f.name) : null));
-  redirect(res, "https://github.com/hawkins/resume/raw/master/resume.pdf");
+  const latest = getResume(files);
+
+  // Redirect client to download the resume
+  if (latest) redirect(res, latest.download_url);
+  else error(res, "Unable to find resume!");
 });
 
 // Listen for requests
