@@ -1,4 +1,11 @@
 const http = require("http");
+const https = require("https");
+
+// Config
+const port = process.env.PORT || 80;
+const user = "hawkins";
+const repo = "resume";
+const path = "";
 
 // Set the response to redirect to the given url
 const redirect = (res, url) => {
@@ -16,15 +23,42 @@ const error = (res, error) => {
   res.end(errorFragment(error));
 };
 
-// TODO: Get the latest resume link
+// Get all files in root folder of repo
+const getFiles = () =>
+  new Promise((resolve, reject) => {
+    // https://developer.github.com/v3/repos/contents/#get-contents
+    https.get(
+      {
+        hostname: "api.github.com",
+        path: `/repos/${user}/${repo}/contents/${path}`,
+        headers: {
+          "User-Agent": "Hawkins Resume App",
+          Accept: "application/vnd.github.v3+json"
+        }
+      },
+      res => {
+        res.setEncoding("utf8");
+        let body = "";
+        res.on("data", data => (body += data));
+        res.on("end", () => {
+          try {
+            resolve(JSON.parse(body));
+          } catch (e) {
+            reject(e);
+          }
+        });
+      }
+    );
+  });
 
 // Create the server
-const server = http.createServer((req, res) => {
+// TODO: Make async
+const server = http.createServer(async (req, res) => {
+  const files = await getFiles();
+  files.map(f => (f.type === "file" ? console.log(f.name) : null));
   redirect(res, "https://github.com/hawkins/resume/raw/master/resume.pdf");
 });
 
 // Listen for requests
-const port = process.env.PORT || 80;
 server.listen(port);
-
 console.log(`Now listening on port ${port}`);
