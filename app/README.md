@@ -8,3 +8,7 @@ Assume the app is deployed to `https://hawkins-resume.now.sh`.
 
 A download link could be added to any webpage like so: `<a href="https://hawkins-resume.now.sh" target="_blank" rel="noreferrer noopener">Download latest resume</a>`
 
+## Deploying
+
+Deploy to [ZEIT's Now.sh](https://now.sh) with `now`, then apply alias and scaling with `now alias`.
+
