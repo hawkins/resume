@@ -31,25 +31,29 @@
 \newcommand{\custombold}[1]{\color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Reg}\selectfont #1 \normalfont}
 
 % Date command
-\setlength{\TPHorizModule}{1mm}
-\setlength{\TPVertModule}{1mm}
-\textblockorigin{0mm}{5mm}
-\newcommand{\lastupdated}{\begin{textblock}{60}(162,0)
-\color{headings}\fontspec[Path = fonts/raleway/]{Raleway-ExtraLight}\fontsize{8pt}{10pt}\selectfont 
-Last Updated on
-\today
-\end{textblock}}
+\newcommand{\lastupdated}{
+	\setlength{\TPHorizModule}{1mm}
+	\setlength{\TPVertModule}{1mm}
+	\textblockorigin{0mm}{5mm}
+	\begin{textblock}{60}(162,0)
+	\color{headings}\fontspec[Path = fonts/raleway/]{Raleway-ExtraLight}\fontsize{8pt}{10pt}\selectfont 
+	Last Updated on
+	\today
+	\end{textblock}
+}
 
 % Clearance command
-\setlength{\TPHorizModule}{1mm}
-\setlength{\TPVertModule}{1mm}
-\textblockorigin{0mm}{5mm}
-\setlength{\parindent}{0cm}
-\newcommand{\clearance}[1]{\begin{textblock}{60}(5,0)
-\fontspec[Path = fonts/lato/]{Lato-Hai}\fontsize{12pt}{12pt}\selectfont 
-Clearance:\\
-\fontspec[Path = fonts/lato/]{Lato-Lig}\selectfont\textbf{#1}
-\end{textblock}}
+\newcommand{\clearance}[1]{
+	\setlength{\TPHorizModule}{1mm}
+	\setlength{\TPVertModule}{1mm}
+	\textblockorigin{0mm}{5mm}
+	\setlength{\parindent}{0cm}
+	\begin{textblock}{60}(5,0)
+	\fontspec[Path = fonts/lato/]{Lato-Hai}\fontsize{12pt}{12pt}\selectfont 
+	Clearance:\\
+	\fontspec[Path = fonts/lato/]{Lato-Lig}\selectfont\textbf{#1}
+	\end{textblock}
+}
 
 % Name command
 \newcommand{\namesection}[3]{
@@ -89,3 +93,15 @@ Clearance:\\
 % Bullet Lists with fewer gaps command
 \newenvironment{tightemize}{\vspace{-\topsep}\begin{itemize}\itemsep1pt \parskip0pt \parsep0pt}{\end{itemize}\vspace{-\topsep}}
 
+% Header
+\newcommand{\header}[0]{
+	\clearance{D.o.D. Top Secret}
+	\lastupdated
+	\namesection{Josh}{Hawkins}{
+		\urlstyle{same}\href{https://www.hawkins.is}{https://hawkins.is}
+		\textbullet{} Github:// \href{https://github.com/hawkins}{\bf hawkins}
+		\textbullet{} Twitter:// \href{https://twitter.com/hawkinjs}{\bf @hawkinjs}
+		\textbullet{} LinkedIn://  \href{https://www.linkedin.com/in/hawkinsjosh}{\bf hawkinsjosh} \\
+		\href{mailto:hawkinswritescode@gmail.com}{hawkinswritescode@gmail.com} | 256.429.8616
+	}
+}

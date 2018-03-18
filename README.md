@@ -1,7 +1,7 @@
 # Josh Hawkins' Resume Project
 
 Thanks for checking out my resume.
-If you're just here to see the lates version, check out the `Josh_Hawkins_Resume_YYYY-MM-DD.pdf` file above (with the recent date, of course).
+If you're just here to see the latest version, check out the `Josh_Hawkins_Resume_YYYY-MM-DD.pdf` file above (with the recent date, of course).
 
 ## Rationale
 
@@ -16,17 +16,19 @@ This way, the link will always lead to the most recent version of the Resume in 
 
 The root folder contains the actual source code for the resume.
 
-`compile.sh` is the script I run to compile this on my mac. It removes old resumes, compiles the new one, and names it properly. Super simple.
+`compile.sh` is the script I run to compile this on my mac and windows box. It removes old resumes, compiles the new one, and names it properly. Super primitive.
 
 `resule.cls` and `resume.tex` are the source files for my resume.
+
+The `.pdf` file is my actual resume. On the master branch, that's the latest public version at all times.
 
 ### `/app`
 
 The `/app` folder is home to the Node.js web app used to redirect users to the latest resume's download link upon visiting it. Basically, it...
 
-- Queries GitHub for files at `hawkins/resume`
-- Looks for `files` with extension `.pdf` and `resume` (case-insensitive) in the file name
-- Redirects users to the download link for the file
+* Queries GitHub for files at `hawkins/resume`
+* Looks for `files` with extension `.pdf` and `resume` (case-insensitive) in the file name
+* Redirects users to the download link for the file
 
 So, when a user visits the web app, they'll just simply download my resume (and most browsers would then close the tab, too).
 This is super handy, because I can deploy this to a site (say, [`hawkins-resume.now.sh`](https://hawkins-resume.now.sh) and then send this link to recruiters or add it to my website and it will always reference the most recent version of my resume, since I always commit this to the master branch.
