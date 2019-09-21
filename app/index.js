@@ -1,7 +1,6 @@
 const https = require('https');
 
 // Config
-const port = process.env.PORT || 80;
 const user = 'hawkins';
 const repo = 'resume';
 const path = '';
