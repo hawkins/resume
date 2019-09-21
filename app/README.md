@@ -4,11 +4,10 @@ This is a simple node.js app to redirect users to the latest version of my resum
 
 ## Example
 
-Assume the app is deployed to `https://hawkins-resume.now.sh`.
+Assume the app is deployed to AWS Lambda with an API Gateway endpoint attached.
 
-A download link could be added to any webpage like so: `<a href="https://hawkins-resume.now.sh" target="_blank" rel="noreferrer noopener">Download latest resume</a>`
+A download link could be added to any webpage like so: `<a href="API_GATEWAY_ENDPOINT" target="_blank" rel="noreferrer noopener">Download latest resume</a>`
 
 ## Deploying
 
-Deploy to [ZEIT's Now.sh](https://now.sh) with `now`, then apply alias and scaling with `now alias`.
-
+Create a lambda function and supply the provided `index.js` as the code. Then, add a trigger for a new API Gateway.

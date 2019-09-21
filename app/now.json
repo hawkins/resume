@@ -1,7 +1,0 @@
-{
-  "alias": "hawkins-resume.now.sh",
-  "env": {
-    "PORT": "80"
-  },
-  "version": 1
-}
