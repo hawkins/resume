@@ -31,7 +31,7 @@ The `/app` folder is home to the Node.js web app used to redirect users to the l
 - Redirects users to the download link for the file
 
 So, when a user visits the web app, they'll just simply download my resume (and most browsers would then close the tab, too).
-This is super handy, because I can deploy this to a site (say, [`AWS Lambda and API Gateway`](https://jjses0hjd7.execute-api.us-east-1.amazonaws.com/prod) and then send this link to recruiters or add it to my website and it will always reference the most recent version of my resume, since I always commit this to the master branch.
+This is super handy, because I can deploy this to a site (say, [`AWS Lambda and API Gateway`](https://1qd9htvyo5.execute-api.us-east-1.amazonaws.com/default/hawkins-resume) and then send this link to recruiters or add it to my website and it will always reference the most recent version of my resume, since I always commit this to the master branch.
 
 ### `/fonts`
 
