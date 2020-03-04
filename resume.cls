@@ -9,7 +9,7 @@
 \LoadClass{article}
 
 % Package Imports
-\usepackage[hmargin=0.8cm, vmargin=0.4cm]{geometry}
+\usepackage[hmargin=0.8cm, vmargin=0.4cm, includeheadfoot, headsep=1.5cm, footskip=0pt]{geometry}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{hyperref}
 \usepackage{titlesec}
@@ -32,40 +32,26 @@
 
 % Date command
 \newcommand{\lastupdated}{
-	\setlength{\TPHorizModule}{1mm}
-	\setlength{\TPVertModule}{1mm}
-	\textblockorigin{0mm}{5mm}
-	\begin{textblock}{60}(170,0)
 	\color{headings}\fontspec[Path = fonts/raleway/]{Raleway-ExtraLight}\fontsize{8pt}{10pt}\selectfont
 	Last Updated
 	\today
-	\end{textblock}
 }
 
 % Clearance command
 \newcommand{\clearance}[1]{
-	\setlength{\TPHorizModule}{1mm}
-	\setlength{\TPVertModule}{1mm}
-	\textblockorigin{0mm}{5mm}
-	\setlength{\parindent}{0cm}
-	\begin{textblock}{60}(5,0)
 	\fontspec[Path = fonts/lato/]{Lato-Hai}\fontsize{12pt}{12pt}\selectfont
-	Clearance:\\
+	Clearance:
 	\fontspec[Path = fonts/lato/]{Lato-Lig}\selectfont\textbf{#1}
-	\end{textblock}
 }
 
 % Name command
 \newcommand{\namesection}[3]{
 	\centering{
 		\sffamily
-		\fontspec[Path = fonts/lato/]{Lato-Hai}\fontsize{40pt}{10cm}\selectfont #1
+		\fontspec[Path = fonts/lato/]{Lato-Hai}\fontsize{30pt}{10cm}\selectfont #1
 		\fontspec[Path = fonts/lato/]{Lato-Lig}\selectfont #2
 	} \\
-	\vspace{3pt}
 	\centering{ \color{headings}\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{14pt}\selectfont #3}
-	\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
-	\vspace{-15pt}
 }
 \titlespacing{\section}{0pt}{0pt}{0pt}
 
@@ -99,14 +85,20 @@
 
 % Header
 \newcommand{\header}[0]{
-	\clearance{Top Secret}
-	\lastupdated
-	\namesection{Josh}{Hawkins}{
+	\thispagestyle{fancy}
+	\fancyhead{}
+	\fancyhead[L,C]{}
+	\fancyhead[L]{\clearance{Top Secret}}
+	\fancyhead[R]{\lastupdated}
+	\fancyhead[C]{\namesection{Josh}{Hawkins}{
 		%\urlstyle{same}\href{https://www.hawkins.is}{https://hawkins.is}
 		%\textbullet{}
     Github:// \href{https://github.com/hawkins}{\bf hawkins}
 		\textbullet{} Twitter:// \href{https://twitter.com/hawkinjs}{\bf @hawkinjs}
-		\textbullet{} LinkedIn://  \href{https://www.linkedin.com/in/hawkinsjosh}{\bf hawkinsjosh} \\
-		\href{mailto:josh@hawkins.is}{josh@hawkins.is}
-	}
+		\textbullet{} LinkedIn://  \href{https://www.linkedin.com/in/hawkinsjosh}{\bf hawkinsjosh}
+		\\
+		Email:// \href{mailto:hawkinswritescode@gmail.com}{\bf hawkinswritescode@gmail.com}
+	}}
+	\fancyfoot[C]{} % Prevent page numbers
+	\renewcommand{\headrulewidth}{0.4pt}
 }
