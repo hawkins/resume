@@ -35,7 +35,7 @@
 	\setlength{\TPHorizModule}{1mm}
 	\setlength{\TPVertModule}{1mm}
 	\textblockorigin{0mm}{5mm}
-	\begin{textblock}{60}(162,0)
+	\begin{textblock}{60}(170,0)
 	\color{headings}\fontspec[Path = fonts/raleway/]{Raleway-ExtraLight}\fontsize{8pt}{10pt}\selectfont
 	Last Updated
 	\today
@@ -107,6 +107,6 @@
     Github:// \href{https://github.com/hawkins}{\bf hawkins}
 		\textbullet{} Twitter:// \href{https://twitter.com/hawkinjs}{\bf @hawkinjs}
 		\textbullet{} LinkedIn://  \href{https://www.linkedin.com/in/hawkinsjosh}{\bf hawkinsjosh} \\
-		\href{mailto:hawkinjs@protonmail.com}{hawkinjs@protonmail.com} | 256.429.8616
+		\href{mailto:josh@hawkins.is}{josh@hawkins.is}
 	}
 }
