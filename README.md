@@ -36,3 +36,11 @@ This is super handy, because I can deploy this to a site (say, [`AWS Lambda and 
 ### `/fonts`
 
 This folder of course just has the fonts used in my resume (Raleway and Lato)
+
+
+## Requirements
+
+To build the resume on a Mac, install these requirements and run `make`:
+
+- [XeLaTeX](http://www.texts.io/support/0001/)
+- [Lato font family](https://fonts.google.com/specimen/Lato?query=lato)
