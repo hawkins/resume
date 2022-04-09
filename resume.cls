@@ -96,7 +96,7 @@
     Github:// \href{https://github.com/hawkins}{\bf hawkins}
 		%\textbullet{} Twitter:// \href{https://twitter.com/hawkinjs}{\bf @hawkinjs}
 		%\textbullet{} LinkedIn://  \href{https://www.linkedin.com/in/hawkinsjosh}{\bf hawkinsjosh}
-		\\
+		%\\
 		Email:// \href{mailto:hawkinswritescode@gmail.com}{\bf hawkinswritescode@gmail.com}
 	}}
 	\fancyfoot[C]{} % Prevent page numbers
