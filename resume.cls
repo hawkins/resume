@@ -9,7 +9,7 @@
 \LoadClass{article}
 
 % Package Imports
-\usepackage[hmargin=0.8cm, vmargin=0.4cm, includeheadfoot, headsep=1.5cm, footskip=0pt]{geometry}
+\usepackage[hmargin=0.8cm, vmargin=0.4cm, includeheadfoot, headsep=1.0cm, footskip=0pt]{geometry}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{hyperref}
 \usepackage{titlesec}
