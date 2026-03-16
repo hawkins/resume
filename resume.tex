@@ -16,30 +16,33 @@
 \header
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     OBJECTIVE
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\section{Objective}
-%\nbsection{Objective}
-% \location{Driven software engineer seeking work experience as a compiler toolchain engineer.}
-% \location{Driven software engineer seeking new challenges in lower-level computing fields.}
-%\location{Driven software engineer seeking new challenges in cloud computing fields.}
-%\sectionsep
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %     COLUMN ONE
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{minipage}[t]{0.30\textwidth}
+\begin{minipage}[t]{0.25\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     OBJECTIVE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Objective}
+% \location{Driven software engineer seeking work experience as a compiler toolchain engineer.}
+%% \location{Driven software engineer seeking new challenges in lower-level computing fields.}
+%%\location{Driven software engineer seeking new challenges in cloud computing fields.}
+%\sectionsep
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     SKILLS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Skills}
 \location{Frameworks \& Libraries}
-Node.js \textbullet{} Reactjs \textbullet{} Ruby on Rails \\
-MobX \textbullet{} Redux \textbullet{} Webpack \textbullet{} Babel \\
-LLVM \textbullet{} GCC \\
+Node.js \textbullet{} Reactjs \\
+Pydantic \textbullet{} uv \\
+AWS SAM \textbullet{} Terraform \\
+Ruby on Rails \\
+%LLVM \textbullet{} GCC \\
 
 \location{Environments}
 AWS \textbullet{} Heroku \textbullet{} Vercel \\
@@ -56,7 +59,7 @@ npm \textbullet{} PyPi \textbullet{} RubyGems \\
 \location{Operating Systems}
 CentOS \textbullet{} Red Hat \\
 Ubuntu \textbullet{} MacOS \\
-Windows XP, 7, 8.1, 10 \\
+%Windows XP, 7, 8.1, 10 \\
 
 \sectionsep
 
@@ -67,22 +70,17 @@ Windows XP, 7, 8.1, 10 \\
 \section{Languages}
 \subsection{Programming}
 \location{Every day:}
-Python \textbullet{} Ruby \\
-\location{Frequently:}
-JavaScript \textbullet{} C++ \textbullet{} C \\
+Python \textbullet{} JavaScript \\
 \location{Familiar:}
-Java \textbullet{} Rust \textbullet{} Kotlin \textbullet{} C\# \\
-GraphQL \textbullet{} SQL \textbullet{} \LaTeX \\
+Java \textbullet{} C++ \textbullet{} C \\
+Ruby \textbullet{} SQL \textbullet{} \LaTeX \\
 % Shell/BASH
-% Haskell
-% CoffeeScript
-% MIPS Assembly
 
 \sectionsep
 
-\subsection{Interpersonal}
-English \textbullet{} German \\
-Some familiarity with ASL \\
+%\subsection{Interpersonal}
+%English \textbullet{} German \\
+%Some familiarity with ASL \\
 
 %\sectionsep
 
@@ -95,10 +93,10 @@ Some familiarity with ASL \\
 \subsection{University}
 \descript{B.S. Computer Science}
 \location{Dec 2017 | Starkville, MS}
-College of Engineering \\
+%College of Engineering \\
 %Cum Laude\\
-\location{ Cum. GPA: 3.89 / 4.0 \\
-Major GPA: 4.0 / 4.0}
+%\location{ Cum. GPA: 3.89 / 4.0 \\
+%Major GPA: 4.0 / 4.0}
 
 % % No longer relevant?
 % \sectionsep
@@ -114,27 +112,27 @@ Major GPA: 4.0 / 4.0}
 %     WRITING
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Writing}
-\href{https://dev.to/hawkinjs/dont-fear-the-regex-a-practical-introduction-to-regular-expressions}{\location{"(Don't Fear) The Regex"}} --- A Practical Introduction to Regular Expressions \\
+%\section{Writing}
+%\href{https://dev.to/hawkinjs/dont-fear-the-regex-a-practical-introduction-to-regular-expressions}{\location{"(Don't Fear) The Regex"}} --- A Practical Introduction to Regular Expressions \\
 
-\sectionsep
+%\sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     COURSEWORK
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Coursework}
+%\section{Coursework}
 % \subsection{Major}
-Data Communication Networks \\
+%Data Communication Networks \\
 % Game Design \\
 % Database Management Systems \\
-Computer Architecture \\
-Artificial Intelligence \\
+%Computer Architecture \\
+%Artificial Intelligence \\
 % Algorithms \\
-Theory of Programming Languages \\
+%Theory of Programming Languages \\
 % Formal Languages and Automata \\
 % Distributed Client-Server Programming \\
-Operating Systems Design \\
-Microprocessors \\
+%Operating Systems Design \\
+%Microprocessors \\
 % Digital Devices \\
 % Data Structures \& Algorithm Analysis \\
 % Java \& Advanced C++ Programming \\
@@ -153,7 +151,7 @@ Microprocessors \\
 
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.69\textwidth}
+\begin{minipage}[t]{0.74\textwidth}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     EXPERIENCE
@@ -161,18 +159,21 @@ Microprocessors \\
 
 \section{Experience}
 
-\runsubsection{Fire Team Solutions}
+\runsubsection{Case Consulting}
 \descript{| Development Lead }
 \location{Aug 2020 - Present | Herndon, VA}
 \vspace{\topsep} % Hacky fix for awkward vertical space
 \begin{tightemize}
 \item Develops and maintains mission-critical serverless ETL pipeline application with a focus on automatic outage resolution for near 100\% uptime
 \item Improved software reliability and automation to reduce after-hour support calls from twice weekly to once quarterly at most
-\item Serves as subject matter expert for language processing and translation practices
+\item Leads a team of engineers through sprint planning, code review, and technical mentorship to maintain high delivery quality and knowledge sharing across the team
+\item Establishes and documents engineering standards and processes, reducing onboarding time for new team members and improving incident response and development consistency
+%\item Serves as subject matter expert for language processing and translation practices
 \item Designs and implements high-availability service interfaces for partner applications and continuous deployment tooling for serverless and containerized applications
 \item Improves traceability through entire pipeline to generate service metrics for cost analysis on a variety of fields
 %\item Aids partner teams throughout the enterprise in improving data quality while increasing data throughput
-\item Interfaces regularly with providers and stakeholders to ensure modern standards for delivery and data quality are upheld
+%\item Interfaces regularly with providers and stakeholders to ensure modern standards for delivery and data quality are upheld
+\item Architects and enforces data validation and schema enforcement strategies across the pipeline, reducing downstream data quality incidents
 \end{tightemize}
 
 \sectionsep
